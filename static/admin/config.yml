@@ -1,0 +1,65 @@
+backend:
+  name: git-gateway
+  branch: master
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+collections:
+  - name: 'content'
+    label: 'Content'
+    files:
+
+    - name: 'introduction'
+      label: 'Introduction'
+      file: 'content/intro.json'
+      fields:
+      - { name: 'blurb', label: 'Blurb', widget: 'string' }
+      - { name: 'description', label: 'Description', widget: 'string' }
+      - { name: 'visible', label: 'Show introduction section?', widget: 'boolean', default: 'true' }
+
+    - name: 'services'
+      label: 'Services'
+      file: 'content/services.json'
+      fields:
+      - { name: 'title', label: 'Title', widget: 'string' }
+      - name: 'services'
+        label: 'Services'
+        widget: 'list'
+        fields:
+        - { name: 'title', label: 'title', widget: 'string' }
+        - { name: 'description', label: 'Description', widget: 'string' }
+        - { name: 'image', label: 'Image', widget: 'image'}
+      - { name: 'visible', label: 'Show services section?', widget: 'boolean', default: 'true' }
+
+    - name: 'contact'
+      label: 'Contact'
+      file: 'content/contact.json'
+      fields:
+      - { name: 'title', label: 'Section Title', widget: 'string' }
+      - { name: 'description', label: 'description', widget: 'string' }
+      - { name: 'email_title', label: 'Email Label', widget: 'string' }
+      - { name: 'email_address', label: 'Email Address', widget: 'string' }
+      - { name: 'phone_title', label: 'Phone Label', widget: 'string' }
+      - { name: 'phone_number', label: 'Phone Number', widget: 'string' }
+      - { name: 'visible', label: 'Show contact section?', widget: 'boolean', default: 'true' }
+
+    - name: 'testimonials'
+      label: 'Testimonials'
+      file: 'content/testimonials.json'
+      fields:
+      - { name: 'title', label: 'Title', widget: 'string' }
+      - name: 'testimonials'
+        label: 'Testimonials'
+        widget: 'list'
+        fields:
+        - { name: 'text', label: 'Testimonial Text', widget: 'string' }
+        - { name: 'author', label: 'Author', widget: 'string' }
+      - { name: 'visible', label: 'Show testimonial section?', widget: 'boolean', default: 'true' }
+
+    - name: 'instagram'
+      label: 'Instagram'
+      file: 'content/instagram.json'
+      fields:
+      - { name: 'title', label: 'Title', widget: 'string' }
+      - { name: 'username', label: 'Username', widget: 'string' }
+      - { name: 'token', label: 'Instagram Access Token', widget: 'string' }
+      - { name: 'visible', label: 'Show instagram?', widget: 'boolean', default: 'true' }
