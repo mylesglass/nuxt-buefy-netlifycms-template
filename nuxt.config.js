@@ -50,8 +50,17 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     // Doc: https://github.com/Developmint/nuxt-svg-loader
-    'nuxt-svg-loader'
+    'nuxt-svg-loader',
+    // Doc: https://github.com/markdown-it/markdown-it
+    '@nuxtjs/markdownit'
   ],
+  /*
+  ** MarkdownIt
+  ** See https://github.com/markdown-it/markdown-it#init-with-presets-and-options
+  */
+  markdownit: {
+    injected: true
+  },
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
