@@ -15,17 +15,15 @@ export const mutations = {
 
 export const actions = {
   async nuxtServerInit ({ commit }) {
-    const files = await require.context('~/assets/content/blog/', false, /\.json$/)
-    const blogPosts = files.keys().map((key) => {
-      const res = files(key)
+    const blogContent = await require.context('~/assets/content/blog/', false, /\.json$/)
+    const blogPosts = blogContent.keys().map((key) => {
+      const res = blogContent(key)
       res.slug = key.slice(2, -5)
       return res
     })
     await commit('setBlogPosts', blogPosts)
-  },
 
-  async loadHome ({ commit }) {
-    const content = await import('~/assets/content/homepage.json')
-    commit('setHome', content)
+    const homeContent = await import('~/assets/content/homepage.json')
+    commit('setHome', homeContent)
   }
 }

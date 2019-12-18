@@ -37,10 +37,6 @@ export default {
     }
   },
 
-  created () {
-    this.$store.dispatch('loadHome')
-  },
-
   head () {
     return {
       script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }]
