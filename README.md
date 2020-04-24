@@ -55,3 +55,7 @@ Assuming you're using Netlify as your host and CMS. If not... you're on your own
  - [Authenticate users with Netlify Identity](https://docs.netlify.com/visitor-access/identity/#enable-identity-in-the-ui)
 
 ...and really man, that's it.
+
+## Future Plans
+
+- Probably look at Vue3 & Typescript, but not right now.
