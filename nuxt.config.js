@@ -13,7 +13,7 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://rsms.me/inter/inter-ui.css' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Inter:500|Inter:400|Inter:700' }
     ],
     script: [
       { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }
@@ -27,7 +27,8 @@ export default {
   ** Global CSS
   */
   css: [
-    '~/css/main.scss'
+    '~/css/main.scss',
+    'blueprint-css/dist/blueprint.min.css'
   ],
   /*
   ** Plugins to load before mounting the App
@@ -52,13 +53,20 @@ export default {
     // Doc: https://github.com/Developmint/nuxt-svg-loader
     'nuxt-svg-loader',
     // Doc: https://github.com/markdown-it/markdown-it
-    '@nuxtjs/markdownit'
+    '@nuxtjs/markdownit',
+    // Doc: https://github.com/nuxt-community/style-resources-module/
+    '@nuxtjs/style-resources'
   ],
+  styleResources: {
+    scss: [
+      './css/*.scss'
+      ]
+  },
   /*
   ** MarkdownIt
   ** See https://github.com/markdown-it/markdown-it#init-with-presets-and-options
   */
-  markdownit: {
+  markdownit: { 
     injected: true
   },
   /*

@@ -1,44 +1,40 @@
+/**
+  Typography set by TypeScale
+  https://type-scale.com/
+  1.333 Perfect Fourth Scale
+**/
+
+html {font-size: 100%;} /*16px*/
+
 body {
-  font-family: "Inter UI", "Helvetica Neue", Arial, Helvetica, sans-serif; /* 1 */
+  background-color: white;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 1.65;
+  color: #333;
 }
 
-.container {
-  max-width: 800px;
+p {margin-bottom: 1.15rem;}
+
+h1, h2, h3, h4, h5 {
+  margin: 2.75rem 0 1.05rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  line-height: 1.15;
 }
 
-a {
-  color: white;
-}
-
-a:hover {
-  color: white;
-  text-decoration: underline;
-}
-
-// Typography
-
-.heading-1 {
-  font-size: 3rem;
+h1 {
+  margin-top: 0;
+  font-size: 4.209em;
   font-weight: 700;
 }
 
-.heading-2 {
-  font-size: 1.8rem;
-  font-weight: 500;
-}
+h2 {font-size: 3.157em;}
 
-.heading-3 {
-  font-size: 1.4rem;
-  font-weight: 400;
-}
+h3 {font-size: 2.369em;}
 
-.heading-light {
-  font-size: 1.9rem;
-  font-weight: 200;
-  text-transform: uppercase;
-  letter-spacing: 1.1rem;
+h4 {font-size: 1.777em;}
 
-  .bold {
-    font-weight: 400;
-  }
-}
+h5 {font-size: 1.333em;}
+
+small, .text_small {font-size: 0.75em;}

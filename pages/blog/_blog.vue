@@ -1,12 +1,12 @@
 <template>
   <section class="section">
     <div class="container">
-      <p class="heading-1">
+      <h1>
         {{ blogPost.title }}
-      </p>
-      <p>
-        {{ new Date(blogPost.date).toUTCString() }}
-      </p>
+      </h1>
+      <h3>
+        {{ new Date(blogPost.date).toLocaleDateString() }}
+      </h3>
       <div v-html="$md.render(blogPost.body)" />
     </div>
   </section>
