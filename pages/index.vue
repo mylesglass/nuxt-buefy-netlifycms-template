@@ -44,6 +44,12 @@ export default {
     body () {
       return this.$store.state.home.body
     }
+  },
+
+  head () {
+    return {
+      script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }]
+    }
   }
 }
 </script>
