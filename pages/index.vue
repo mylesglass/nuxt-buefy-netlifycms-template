@@ -10,8 +10,6 @@
             {{ subtitle }}
           </h2>
           <div v-html="$md.render(body)" />
-          <github-button href="https://github.com/mylesglass" data-size="large" aria-label="Follow @mylesglass on GitHub">Follow @mylesglass</github-button>
-          <github-button href="https://github.com/ntkme/github-buttons/generate" data-icon="octicon-repo-template" data-size="large" aria-label="Use this template ntkme/github-buttons on GitHub">Use this template</github-button>
         </div>
         <div bp="6" class="table-col">
           <h2>
@@ -25,15 +23,13 @@
 </template>
 
 <script>
-import GithubButton from 'vue-github-button'
 import BlogTable from '@/pages/blog/index.vue'
 
 export default {
   name: 'HomePage',
 
   components: {
-    BlogTable,
-    GithubButton
+    BlogTable
   },
 
   computed: {
